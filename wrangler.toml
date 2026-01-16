@@ -1,0 +1,14 @@
+name = "cerebras-proxy"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# 开启 Smart Placement (为了解决 403 问题)
+[placement]
+mode = "smart"
+
+# 下面这些是变量的占位符
+# 注意：不要在这里填写真实的 Key！真实的 Key 要在 Cloudflare 后台填
+[vars]
+UPSTREAM_URL = "api.cerebras.ai"
+HTTPS = true
+MAX_RETRIES = 2
